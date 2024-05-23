@@ -1,18 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="80dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:fontFamily="@font/proxima_nova_semibold"
+            />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/input_field_background"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About :"
+            android:fontFamily="@font/proxima_nova_semibold"
+            />
+
+        <EditText
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/input_field_background"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="start|top"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interests:"
+            android:fontFamily="@font/proxima_nova_semibold"
+            />
+
+        <EditText
+            android:id="@+id/interests"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/input_field_background"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="start|top"
+            android:padding="8dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobbies:"
+            android:fontFamily="@font/proxima_nova_semibold"
+            />
+
+        <EditText
+            android:id="@+id/hobbies"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/input_field_background"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="start|top"
+            android:padding="8dp"
+
+            />
+
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_field_background"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="Done"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
