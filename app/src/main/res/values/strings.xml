@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AiAssistant</string>
+    <string name="app_name">AI Assistant</string>
+    <string name="connected">Internet restored</string>
+    <string name="disconnected">No connectivity!</string>
 </resources>

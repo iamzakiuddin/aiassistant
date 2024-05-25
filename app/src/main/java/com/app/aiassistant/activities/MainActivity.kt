@@ -1,10 +1,11 @@
-package com.app.aiassistant
+package com.app.aiassistant.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.app.aiassistant.R
 import com.app.aiassistant.utils.SharedPreferenceHelper
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (SharedPreferenceHelper.getSharedPreferenceBoolean(this,"isUserSaved",false)){
-            startActivity(Intent(this,AIActivity::class.java))
+            startActivity(Intent(this, AIActivity::class.java))
             finish()
         }else{
             setContentView(R.layout.activity_main)
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         SharedPreferenceHelper.setSharedPreferenceString(this,"interests",hobbies?.text?.toString() ?: "")
         SharedPreferenceHelper.setSharedPreferenceString(this,"hobbies",hobbies?.text?.toString() ?: "")
 
-        startActivity(Intent(this,AIActivity::class.java))
+        startActivity(Intent(this, AIActivity::class.java))
         finish()
     }
 
